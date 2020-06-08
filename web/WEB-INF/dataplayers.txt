@@ -1,0 +1,6 @@
+John	C-24	Calgary	        Alberta	         23015
+Patrick	d-65	Queensland	Brisbane	 2342526
+Mark	g-54	Sydney	        New South Wales	 2342526
+Selena	t-76	Orlando	        Florida	         768553
+Jessica	f-92	Destin	        Florida		 675465
+Bruno	k-42	Dallas	        Texas		 675465

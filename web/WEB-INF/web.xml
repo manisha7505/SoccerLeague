@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    <display-name>SL-314 WebApp Example</display-name>
+    <description>
+        This Web Application demonstrates a well-encapsulated Model for
+        the Soccer League webapp.
+    </description>
+        <context-param>
+        <param-name>data-directory</param-name>
+        <param-value>C:\Users\OM\Documents\NetBeansProjects\SoccerLeague\web\WEB-INF\data</param-value>
+    </context-param>
+    
+    <listener>
+     
+        <listener-class>sl314.util.InitializeModelProperties</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>ListLeagues</servlet-name>
+        <servlet-class>sl314.view.ListLeagueServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddLeagueForm</servlet-name>
+        <servlet-class>sl314.view.AddLeagueFormServlet</servlet-class>
+        <init-param>
+            <param-name>seasons-list</param-name>
+            <param-value>Spring,Summer,Autumn,Winter</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>AddLeague</servlet-name>
+        <servlet-class>sl314.controller.AddLeagueServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Success</servlet-name>
+        <servlet-class>sl314.view.SuccessServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegisterForm</servlet-name>
+        <servlet-class>sl314.view.RegisterFormServlet</servlet-class>
+        <init-param>
+            <param-name>seasons-list</param-name>
+            <param-value>Spring,Summer,Autumn,Winter</param-value>
+        </init-param>
+        <init-param>
+            <param-name>divisions-list</param-name>
+            <param-value>Coed A,Coed B,Mens,Womens</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>sl314.controller.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ThankYou</servlet-name>
+        <servlet-class>sl314.view.ThankYouServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListLeagues</servlet-name>
+        <url-pattern>/list_leagues.view</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddLeagueForm</servlet-name>
+        <url-pattern>/admin/add_league.view</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddLeague</servlet-name>
+        <url-pattern>/admin/add_league.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Success</servlet-name>
+        <url-pattern>/admin/success.view</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterForm</servlet-name>
+        <url-pattern>/register/form.view</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/register/form.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ThankYou</servlet-name>
+        <url-pattern>/register/thank_you.view</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

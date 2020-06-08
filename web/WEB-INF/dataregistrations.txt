@@ -1,0 +1,6 @@
+1	John	 Mens
+2	Patrick	 Coed B
+4	Mark	 Coed A
+3	Selena	 Womens
+2	Jessica	 Womens
+1	Bruno	 Mens

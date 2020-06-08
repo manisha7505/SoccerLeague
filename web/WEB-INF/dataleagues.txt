@@ -1,0 +1,6 @@
+1	2020	Autumn	MMA
+2	2023	Spring	SMA
+3	2025	Summer	Laliga
+4	2021	Winter	CSB
+5	2023	Spring	DFS
+6	2024	Summer	BT
